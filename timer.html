@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            height: 15rem;
+            width: 50rem;
+            border: 5px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #timer{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <br>
+        <h1 id="timer"></h1>
+    </div>
+</body>
+</html>
+<script>
+function timing(){
+    const obj=document.getElementById("timer");
+    const now = new Date();
+    const indiantime = now.toLocaleTimeString();
+    obj.innerHTML=indiantime;
+}
+setInterval(timing,1000);
+</script>
